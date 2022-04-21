@@ -20,15 +20,15 @@ public class GameStart {
         int gameCycles = 10;
         for (int i = 0; i < gameCycles; i++) {
             int gameMode = 0;
-        while (!game.checkEquality(gameMode, Set.of(1, 2))) {
-            System.out.println(GamePhrases.GAME_MODE.getPhrase());
-            try {
-                gameMode = scanner.nextInt();
-            } catch (InputMismatchException ex) {
-                System.out.println("Game mode should be 1 or 2");
-                scanner.nextLine();
+            while (!game.checkEquality(gameMode, Set.of(1, 2))) {
+                System.out.println(GamePhrases.GAME_MODE.getPhrase());
+                try {
+                    gameMode = scanner.nextInt();
+                } catch (InputMismatchException ex) {
+                    System.out.println("Game mode should be 1 or 2");
+                    scanner.nextLine();
+                }
             }
-        }
             int player1Move = 0;
             while (!game.checkEquality(player1Move, Set.of(1, 2, 3))) {
                 System.out.println(GamePhrases.INVITATION_TO_PLAY.getPhrase());
